@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Diya Patel | Portfolio</title>
-
 <style>
   :root {
     --green: #1f3d36;
@@ -16,17 +15,8 @@
     --muted: #6a736f;
     --line: #e3dccb;
   }
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
   body {
     font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
     background: var(--cream);
@@ -35,11 +25,7 @@
     display: flex;
     min-height: 100vh;
   }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
+  a { color: inherit; text-decoration: none; }
 
   /* Sidebar */
   aside {
@@ -48,15 +34,12 @@
     color: #e9efe9;
     padding: 56px 32px;
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
+    top: 0; bottom: 0; left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-
   .headshot {
     width: 170px;
     height: 170px;
@@ -66,31 +49,21 @@
     margin-bottom: 26px;
     background: var(--green-soft);
   }
-
   aside h1 {
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 2rem;
     font-weight: 700;
     color: #fff;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
-
   aside .role {
-    font-size: 0.78rem;
-    letter-spacing: 1.4px;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     color: #e8b9a3;
-    line-height: 1.8;
     margin-bottom: 36px;
   }
-
-  aside nav {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    width: 100%;
-  }
-
+  aside nav { display: flex; flex-direction: column; gap: 6px; width: 100%; }
   aside nav a {
     padding: 11px 16px;
     border-radius: 8px;
@@ -98,10 +71,14 @@
     font-size: 0.95rem;
     transition: background 0.2s;
   }
-
-  aside nav a:hover {
-    background: var(--green-soft);
+  aside nav a:hover { background: var(--green-soft); }
+  .side-contact {
+    margin-top: auto;
+    font-size: 0.85rem;
+    color: #b9c9c1;
+    line-height: 1.9;
   }
+  .side-contact a { color: #fff; border-bottom: 1px solid #e8b9a3; }
 
   /* Main */
   main {
@@ -110,7 +87,6 @@
     max-width: 980px;
     padding: 70px 56px;
   }
-
   .eyebrow {
     font-size: 0.8rem;
     letter-spacing: 2px;
@@ -119,19 +95,14 @@
     font-weight: 700;
     margin-bottom: 12px;
   }
-
   h2 {
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 2rem;
     color: var(--green);
     margin-bottom: 22px;
   }
+  section { margin-bottom: 90px; }
 
-  section {
-    margin-bottom: 90px;
-  }
-
-  /* Personal Statement */
   .statement {
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.4rem;
@@ -141,17 +112,15 @@
     padding-left: 26px;
   }
 
-  /* Skills */
-  .skill-group {
-    margin-bottom: 26px;
+  .skill-group { margin-bottom: 26px; }
+  .skill-group h3 {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
   }
-
-  .chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; }
   .chip {
     background: var(--paper);
     border: 1.5px solid var(--green);
@@ -161,13 +130,11 @@
     font-weight: 600;
     font-size: 0.95rem;
   }
-
   .chip.tool {
     background: var(--green);
     color: #fff;
   }
 
-  /* Projects */
   .project {
     display: flex;
     gap: 28px;
@@ -177,7 +144,6 @@
     padding: 32px;
     margin-bottom: 26px;
   }
-
   .project .num {
     font-family: Georgia, serif;
     font-size: 3.2rem;
@@ -186,14 +152,12 @@
     font-weight: 700;
     min-width: 62px;
   }
-
   .project h3 {
     font-family: Georgia, serif;
     font-size: 1.35rem;
     color: var(--green);
     margin-bottom: 4px;
   }
-
   .project .meta {
     font-size: 0.8rem;
     letter-spacing: 1px;
@@ -202,12 +166,7 @@
     margin-bottom: 14px;
     font-weight: 600;
   }
-
-  .project p {
-    color: #45504c;
-    margin-bottom: 18px;
-  }
-
+  .project p { color: #45504c; margin-bottom: 18px; }
   .btn {
     display: inline-block;
     background: var(--terracotta);
@@ -218,325 +177,120 @@
     border-radius: 8px;
     transition: background 0.2s;
   }
+  .btn:hover { background: #a94e2f; }
 
-  .btn:hover {
-    background: #a94e2f;
-  }
-
-  /* Contact */
-  .contact-links {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    align-items: flex-start;
-  }
-
-  .contact-item {
+  .contact-links a {
     display: inline-block;
+    margin-right: 22px;
     font-weight: 700;
     color: var(--green);
     border-bottom: 2px solid var(--terracotta);
-    padding-bottom: 2px;
   }
-
-  .contact-item:hover {
-    color: var(--terracotta);
-  }
-
   footer {
     font-size: 0.85rem;
     color: var(--muted);
     margin-top: 40px;
   }
 
-  /* Mobile */
   @media (max-width: 860px) {
-    body {
-      display: block;
-    }
-
+    body { display: block; }
     aside {
       position: static;
       width: 100%;
       padding: 40px 20px 28px;
     }
-
-    aside nav {
-      flex-direction: row;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    main {
-      margin-left: 0;
-      width: 100%;
-      padding: 44px 22px;
-    }
-
-    .statement {
-      font-size: 1.15rem;
-    }
-
-    .project {
-      flex-direction: column;
-      gap: 10px;
-      padding: 24px;
-    }
+    aside nav { flex-direction: row; justify-content: center; flex-wrap: wrap; }
+    .side-contact { display: none; }
+    main { margin-left: 0; width: 100%; padding: 44px 22px; }
+    .statement { font-size: 1.15rem; }
+    .project { flex-direction: column; gap: 10px; padding: 24px; }
   }
 </style>
 </head>
-
 <body>
 
-<!-- ================= SIDEBAR ================= -->
-
 <aside>
-
-  <img
-    src="headshot.jpg"
-    alt="Diya Patel"
-    class="headshot"
-  >
-
+  <img src="headshot.jpg" alt="Diya Patel" class="headshot">
   <h1>Diya Patel</h1>
-
-  <div class="role">
-    Finance &amp; Economics<br>
-    Rutgers Business School<br>
-    December 2027
-  </div>
-
+  <div class="role">Finance &amp; Economics &middot; Rutgers</div>
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
-
+  <div class="side-contact">
+    <a href="mailto:diyapatel2236@gmail.com">diyapatel2236@gmail.com</a><br>
+    <a href="https://www.linkedin.com/in/diyap2236/" target="_blank">LinkedIn</a>
+  </div>
 </aside>
-
-
-<!-- ================= MAIN CONTENT ================= -->
 
 <main>
 
-  <!-- ABOUT -->
-
   <section id="about">
-
-    <div class="eyebrow">
-      About Me
-    </div>
-
-    <p class="statement">
-      Hi! My name is Diya Patel, and I'm a junior at Rutgers
-      Business School studying Finance and Economics. I'm interested
-      in breaking into Corporate Finance or Asset Management and
-      learning how teams collaborate to drive growth and expand
-      their business.
-    </p>
-
+    <div class="eyebrow">About Me</div>
+    <p class="statement">Hi! My name is Diya Patel, and I'm a junior at Rutgers Business School studying Finance and Economics. I'm interested in breaking into Corporate Finance or Asset Management and learning how teams collaborate to drive growth and expand their business.</p>
   </section>
-
-
-  <!-- SKILLS -->
 
   <section id="skills">
-
-    <div class="eyebrow">
-      What I Bring
-    </div>
-
-    <h2>
-      Skills
-    </h2>
+    <div class="eyebrow">What I Bring</div>
+    <h2>Skills</h2>
 
     <div class="skill-group">
-
+      <h3>Finance &amp; Analysis</h3>
       <div class="chips">
-
-        <span class="chip">
-          Financial Modeling
-        </span>
-
-        <span class="chip">
-          Financial Analysis
-        </span>
-
-        <span class="chip">
-          Market Research
-        </span>
-
-        <span class="chip">
-          Valuation
-        </span>
-
-        <span class="chip">
-          Investment Analysis
-        </span>
-
-        <span class="chip tool">
-          DTCC
-        </span>
-
-        <span class="chip tool">
-          Broadridge
-        </span>
-
-        <span class="chip tool">
-          Microsoft Excel
-        </span>
-
-        <span class="chip tool">
-          Microsoft Copilot
-        </span>
-
+        <span class="chip">Financial Modeling</span>
+        <span class="chip">Financial Analysis</span>
+        <span class="chip">Market Research</span>
+        <span class="chip">Valuation</span>
+        <span class="chip">Investment Analysis</span>
       </div>
-
     </div>
 
+    <div class="skill-group">
+      <h3>Tools &amp; Platforms</h3>
+      <div class="chips">
+        <span class="chip tool">DTCC</span>
+        <span class="chip tool">Broadridge</span>
+        <span class="chip tool">Microsoft Excel</span>
+        <span class="chip tool">Microsoft Copilot</span>
+      </div>
+    </div>
   </section>
-
-
-  <!-- PROJECTS -->
 
   <section id="projects">
-
-    <div class="eyebrow">
-      Selected Work
-    </div>
-
-    <h2>
-      Projects
-    </h2>
-
-
-    <!-- PROJECT 1 -->
+    <div class="eyebrow">Selected Work</div>
+    <h2>Projects</h2>
 
     <div class="project">
-
-      <div class="num">
-        01
-      </div>
-
+      <div class="num">01</div>
       <div>
-
-        <h3>
-          Walmart Inc. Stock Report
-        </h3>
-
-        <div class="meta">
-          Equity Research
-        </div>
-
-        <p>
-          For this project, I conducted investment research on
-          Walmart Inc. and created a Stock Report synthesizing
-          and evaluating its financial performance, business model,
-          and competitive positioning within the global retail
-          industry. I analyzed key financial metrics, revenue
-          drivers, and industry trends to form an investment thesis,
-          ultimately issuing a BUY recommendation based on the
-          company's strong market position and financial stability.
-        </p>
-
-        <a
-          class="btn"
-          href="Walmart_Stock_Report.pdf"
-          target="_blank"
-        >
-          View Report (PDF)
-        </a>
-
+        <h3>Walmart Inc. Stock Report</h3>
+        <div class="meta">Equity Research</div>
+        <p>For this project, I conducted investment research on Walmart Inc. and created a Stock Report synthesizing and evaluating its financial performance, business model, and competitive positioning within the global retail industry. I analyzed key financial metrics, revenue drivers, and industry trends to form an investment thesis, ultimately issuing a BUY recommendation based on the company's strong market position and financial stability.</p>
+        <a class="btn" href="Walmart_Stock_Report.pdf" target="_blank">View Report (PDF)</a>
       </div>
-
     </div>
-
-
-    <!-- PROJECT 2 -->
 
     <div class="project">
-
-      <div class="num">
-        02
-      </div>
-
+      <div class="num">02</div>
       <div>
-
-        <h3>
-          Microsoft Corporation Investment Analysis PPT
-        </h3>
-
-        <div class="meta">
-          Capital Society
-        </div>
-
-        <p>
-          I collaborated in a global team at Capital Society,
-          a student-led internship program designed to help
-          undergraduate students build hands-on experience in
-          different finance-related areas. We developed an
-          equity research report on Microsoft Corporation,
-          applying value-investing principles to assess
-          long-term investment potential. I conducted industry
-          and qualitative analysis, utilizing financial
-          statements, investor reports, and market data to
-          support the analysis. Throughout this experience,
-          I was able to gain hands-on exposure to market
-          research and in-depth investment analysis techniques.
-        </p>
-
-        <a
-          class="btn"
-          href="Microsoft_Investment_Analysis.pdf"
-          target="_blank"
-        >
-          View Presentation (PDF)
-        </a>
-
+        <h3>Microsoft Corporation Investment Analysis PPT</h3>
+        <div class="meta">Capital Society</div>
+        <p>I collaborated in a global team at Capital Society, a student-led internship program designed to help undergraduate students build hands-on experience in different finance-related areas. We developed an equity research report on Microsoft Corporation, applying value-investing principles to assess long-term investment potential. I conducted industry and qualitative analysis, utilizing financial statements, investor reports, and market data to support the analysis. Throughout this experience, I was able to gain hands-on exposure to market research and in-depth investment analysis techniques.</p>
+        <a class="btn" href="Microsoft_Investment_Analysis.pdf" target="_blank">View Presentation (PDF)</a>
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- CONTACT -->
-
   <section id="contact">
-
-    <div class="eyebrow">
-      Get In Touch
-    </div>
-
-    <h2>
-      Contact
-    </h2>
-
+    <div class="eyebrow">Get In Touch</div>
+    <h2>Contact</h2>
     <div class="contact-links">
-
-      <a
-        class="contact-item"
-        href="mailto:diyapatel2236@gmail.com"
-      >
-        diyapatel2236@gmail.com
-      </a>
-
-      <a
-        class="contact-item"
-        href="https://www.linkedin.com/in/diyap2236/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        LinkedIn
-      </a>
-
+      <a href="mailto:diyapatel2236@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/diyap2236/" target="_blank">LinkedIn</a>
     </div>
-
-    <footer>
-      &copy; 2026 Diya Patel
-    </footer>
-
+    <footer>&copy; 2026 Diya Patel</footer>
   </section>
 
 </main>
